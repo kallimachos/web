@@ -1,0 +1,294 @@
+<!DOCTYPE HTML>
+    <html lang="en">
+        <head>
+<meta HTTP-EQUIV="Expires" content="Mon, 01 Jan 1990 12:00:00 GMT" />
+<meta charset="UTF-8"/>
+    <title>MongoDB Support Article</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
+    <script src="../libs/jquery-3.2.1.js"></script>
+    <script src="../libs/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/8.1.0/markdown-it.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it-emoji/1.3.0/markdown-it-emoji.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it-footnote/3.0.1/markdown-it-footnote.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-markdown/2.10.0/js/bootstrap-markdown.min.js"></script>
+    <script src="ConvertMarkdown.js"></script>
+    <link href="Markdown.css" rel="stylesheet" />
+    <link href="app.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-markdown/2.10.0/css/bootstrap-markdown.min.css" rel="stylesheet" />
+    <style>
+        body {
+            background-color: #eeeeee;
+        }
+    </style>
+        </head>
+        <body id="bv1"><span id="j_id0:j_id6">
+    <style>
+        td {padding: 4px !important;}
+        .panel-heading {padding: 1px !important;}
+        .panel-heading > h3 {margin: 5px;}
+
+        @media (max-width: 992px) {
+            .affix {
+                position: static;
+            }
+        }
+
+        .nav li {
+            padding-bottom: 0px !important;
+            font-size: 1em !important;
+            line-height: 20px !important;
+        }
+        .nav li > a {
+            padding: 3px 15px !important;
+        }
+        .nav li.active {
+            border-left: 2px solid #6ba442;
+        }
+        .back-to-top {
+            font-style: small;
+        }
+    </style>
+    <header id="page-top">
+        <div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="flex block-xl padding--horizontal-xs" id="articleTitle">Markdown Reference</h2>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div id="page-main">
+        <div class="flex block-xl padding--horizontal-xs">
+            <div class="col-md-offset-9 col-md-3 col-sm-12 affix">
+                <div id="rightCol">
+                    <h3>Quick Links</h3>
+                    <nav class="hidden-xs hidden-sm" id="sidebar">
+                        <ul class="nav">
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="pbBody">
+                        <div class="row buffer-bottom-sm">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 id="Question__c">Question</h3>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="commenttext"># h1 Heading
+## h2 Heading
+### h3 Heading
+#### h4 Heading
+##### h5 Heading
+
+This is normal text.
+
+## Horizontal Rules
+
+___
+
+---
+
+***
+
+
+## Emphasis
+
+**This is bold text**
+
+__This is bold text__
+
+*This is italic text*
+
+_This is italic text_
+
+***This is bold and italic text***
+
+___This is bold and italic text___
+
+~~Strikethrough~~
+
+
+## Blockquotes
+
+
+> Blockquotes can also be nested...
+> > ...by using additional greater-than signs right next to each other...
+> > > ...or with spaces between arrows.
+
+
+## Lists
+
+Unordered
+
+- Create a list by starting a line with `+`, `-`, or `*`
+- and another line
+  ```
+  some code
+  ```
+- Sub-lists are made by indenting 2 spaces:
+  - Marker character change forces new list start:
+    * Ac tristique libero volutpat at
+    + Facilisis in pretium nisl aliquet
+    - Nulla volutpat aliquam velit
+- Very easy!
+- is it?
+
+Ordered
+
+1. Using sequential numbers
+
+2. Consectetur adipiscing elit
+
+3. Integer molestie lorem at massa
+
+<br>
+
+1. Using `1.` for all numbers
+   is this ok?
+
+   how about this?
+
+1. Consectetur adipiscing elit
+
+1. Integer molestie lorem at massa
+
+
+## Code
+
+Inline `code`.
+
+Indented code
+
+    // Some comments
+    line 1 of code
+    line 2 of code
+    line 3 of code
+
+
+Block code "fences"
+
+```
+Sample text here...
+```
+
+Syntax highlighting
+
+``` js
+var foo = function (bar) {
+  return bar++;
+};
+
+console.log(foo(5));
+```
+
+
+## Tables
+
+| Option | Description                              |
+| ------ | ---------------------------------------- |
+| data   | path to data files to supply the data that will be passed into templates. |
+| engine | engine to be used for processing templates. Handlebars is the default. |
+| ext    | extension to be used for dest files.     |
+
+Right aligned columns
+
+| Option |                              Description |
+| -----: | ---------------------------------------: |
+|   data | path to data files to supply the data that will be passed into templates. |
+| engine | engine to be used for processing templates. Handlebars is the default. |
+|    ext |     extension to be used for dest files. |
+
+
+## Links
+
+[link text](http://dev.nodeca.com)
+
+[link with title](http://nodeca.github.io/pica/demo/ "title text!")
+
+https://github.com/nodeca/pica
+
+
+## Images
+
+![calm](https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Keep-calm-and-carry-on.svg/170px-Keep-calm-and-carry-on.svg.png)
+<br>
+![Pennyfarthing](https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Velocipede.svg/200px-Velocipede.svg.png "Pennyfarthing")
+<br>
+Using footnote syntax:
+
+![Alt text][id]
+
+[id]: https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Gold_football_ball.svg/200px-Gold_football_ball.svg.png  "Gold football"
+
+
+## Footnotes
+
+Footnote 1 link[^first].
+
+Footnote 2 link[^second].
+
+Inline footnote^[Text of inline footnote] definition.
+
+Duplicated footnote reference[^second].
+
+[^first]: Footnote **can have markup**
+
+    and multiple paragraphs.
+
+[^second]: Footnote text.</div>
+                                </div>
+                            </div>
+                        </div>
+            </div>
+            <div class="row buffer-bottom-sm">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 id="Answer__c">Answer</h3>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="commenttext">42</div>
+                                </div>
+                            </div>
+    <script>
+    $(document).ready(function(){
+        convertArticle();
+
+        $('.article-content').find('.panel-heading h3').each(function(){
+            var id = $(this).attr('id');
+            var linktext = $(this).text();
+            var link = $('<a/>').attr('href','#' + id).html('<i class="glyphicon glyphicon-file"></i>&#160;' + linktext);
+            var li = $('<li/>').append(link);
+            $('ul.nav').append(li);
+        });
+
+        //$('#sidebar').affix({
+        //
+        //});
+
+        /* activate scrollspy menu */
+        //var $body   = $(document.body);
+        //var navHeight = $('#primary-navbar').outerHeight(true) + 10;
+
+        //$body.scrollspy({
+        //    target: '#rightCol',
+        //    offset: navHeight
+        //});
+
+        /* smooth scrolling sections */
+        $("a[href*='#']:not([href='#'])").click(function() {
+            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+              var target = $(this.hash);
+              target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+              if (target.length) {
+                $('html,body').animate({
+                  scrollTop: target.offset().top - 85
+                }, 500);
+                return false;
+              }
+            }
+        });
+    });
+    </script></span>
+        </body>
+    </html>
